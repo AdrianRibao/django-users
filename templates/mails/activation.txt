@@ -1,0 +1,7 @@
+Activate your account in {{ site.name  }} clicking in the following url:
+
+{{ url }}
+
+Regards,
+
+The {{ site.name }} team.

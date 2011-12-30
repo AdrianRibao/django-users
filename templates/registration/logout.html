@@ -1,0 +1,9 @@
+{% extends "base/registration_base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Logout" %}{% endblock %}
+
+{% block content %}
+    <p>{% trans "You are logged out." %}</p>
+    <a href="/" class="back">{% trans "Go back to the home page" %}</a>
+{% endblock %}

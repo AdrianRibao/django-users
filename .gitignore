@@ -1,0 +1,9 @@
+*.pyc
+.project
+.pydevproject
+*.swp
+env/
+.ropeproject
+.sass-cache
+.coverage
+.noseids
