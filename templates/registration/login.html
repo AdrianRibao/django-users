@@ -4,12 +4,6 @@
 {% block title %}{% trans "Login" %}{% endblock %}
 
 {% block content %}
-    <div id="socialConnect">
-        <p class="linkedin"><img src="{{ STATIC_URL }}graphics/icons/aquaticus.social/60X60/linkedin.png" alt="{% trans "Linkedin" %}"/><a href="{% url socialauth_begin 'linkedin' %}">{% trans "Entra con tu cuenta de Linkedin" %}</a></p>
-        <p class="google"><img src="{{ STATIC_URL }}graphics/icons/aquaticus.social/60X60/google.png" alt="{% trans "Google" %}"/><a href="{% url socialauth_begin 'google' %}">{% trans "Entra con tu cuenta de Google" %}</a></p>
-        <p class="twitter"><img src="{{ STATIC_URL }}graphics/icons/aquaticus.social/60X60/twitter.png" alt="{% trans "Twitter" %}"/><a href="{% url socialauth_begin 'twitter' %}">{% trans "Entra con tu cuenta de Twitter" %}</a></p>
-    </div>
-
     <div id="loginForm">
         <form method="post" action="{% url auth_login %}">
         {% csrf_token %}
