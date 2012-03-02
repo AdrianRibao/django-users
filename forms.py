@@ -16,3 +16,14 @@ class CreateUserForm(forms.ModelForm):
             raise forms.ValidationError(_(u"The passwords don't match"))
         return self.cleaned_data
 
+    def clean_username(self):
+        username = self.cleaned_data.get('username')
+        try:
+            user = User.objects.get(username=username)
+        except User.DoesNotExist:
+            user = None
+
+        if user:
+            raise forms.ValidationError(_(u"The username has already been taken"))
+
+        return self.cleaned_data

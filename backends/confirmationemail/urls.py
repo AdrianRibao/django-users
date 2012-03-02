@@ -3,10 +3,11 @@ from django.conf.urls.defaults import *
 from django.views.generic.simple import direct_to_template
 from  perfiles.urls import urlpatterns as baseurlpatterns
 from perfiles.backends.confirmationemail.views import Activate, CreateUser
+from common.forms import RegistrationForm
 
 urlpatterns = patterns('',
         url(r'^register/$',
-            CreateUser.as_view(),
+            CreateUser.as_view(form_class=RegistrationForm),
             name='register'
             ),
         url(r'^activation-sent/$',

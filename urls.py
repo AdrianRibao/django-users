@@ -2,11 +2,15 @@
 from django.conf.urls.defaults import *
 from django.contrib.auth.views import login, logout, password_change, password_change_done,\
         password_reset, password_reset_done, password_reset_confirm, password_reset_complete
+from longerusername.forms import AuthenticationForm
 
 urlpatterns = patterns('',
                        url(r'^login/$',
                            login,
-                           {'template_name': 'registration/login.html'},
+                           {
+                               'template_name': 'registration/login.html',
+                               'authentication_form': AuthenticationForm,
+                               },
                            name='auth_login'),
                        url(r'^logout/$',
                            logout,

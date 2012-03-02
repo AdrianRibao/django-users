@@ -57,8 +57,8 @@ class CreateUser(CreateUserBase):
         data = form.cleaned_data
         user = User.objects.create_user(data['username'], data['email'], data['password'])
         user.is_active = False
-        user.first_name = data['first_name']
-        user.last_name = data['last_name']
+        user.first_name = data.get('first_name', '')
+        user.last_name = data.get('last_name', '')
         user.save()
         # Send the activation email
         self._send_activation_email(user)
