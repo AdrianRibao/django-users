@@ -99,6 +99,7 @@ class Activate(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(Activate, self).get_context_data(**kwargs)
-        context['ACTIVATION_REDIRECT'] = settings.LOGIN_REDIRECT_URL
+        redirect = getattr(settings, 'ACTIVATION_REDIRECT', settings.LOGIN_REDIRECT_URL)
+        context['ACTIVATION_REDIRECT'] = redirect
         return context
 
