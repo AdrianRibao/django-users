@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-11 12:54+0200\n"
+"POT-Creation-Date: 2012-04-11 16:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,6 +33,10 @@ msgstr "Las contraseñas no coinciden"
 #: forms.py:27
 msgid "The username has already been taken"
 msgstr "El nombre de usuario ya está siendo usado"
+
+#: backends/confirmationemail/views.py:39
+msgid "Activate your account in %(site_name)s"
+msgstr "Active su cuenta en %(site_name)s"
 
 #: templates/base/registration_base.html:4
 msgid "Registration"
@@ -73,6 +77,10 @@ msgstr "Active su cuenta"
 #: templates/registration/confirmationemail/activate.html:7
 msgid "Your account has been activated"
 msgstr "Su cuenta ha sido activada"
+
+#: templates/registration/confirmationemail/activate.html:9
+msgid "Go to the control panel"
+msgstr "Ir al panel de control"
 
 #: templates/registration/confirmationemail/activation-sent.html:4
 msgid "Activation sent"

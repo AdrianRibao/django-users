@@ -36,7 +36,7 @@ class CreateUser(CreateUserBase):
                 'site': site,
         }
         content = t.render(Context(data))
-        send_mail(_(u'Activation'), content, 'web@adrima.es',
+        send_mail(_(u'Activate your account in %(site_name)s' % (site.name,)), content, 'web@adrima.es',
                     [user.email,], fail_silently=False)
         #context ={
                 #}
