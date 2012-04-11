@@ -5,6 +5,7 @@ This backend creates a deactivated user, and sends an email with the confirmatio
 from perfiles.views import CreateUserBase
 from django.template import Context, loader
 #from django.core.signing import TimestampSigner, BadSignature, SignatureExpired
+from django.utils.translation import ugettext as _
 from django.core import signing
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect, Http404
@@ -33,8 +34,8 @@ class CreateUser(CreateUserBase):
                 'site': site,
         }
         content = t.render(Context(data))
-        send_mail('Activation', content, 'from@adrima.es',
-                    ['to@example.com'], fail_silently=False)
+        send_mail(_(u'Activation'), content, 'web@adrima.es',
+                    [user.email,], fail_silently=False)
         #context ={
                 #}
         #send_templated_mail(
