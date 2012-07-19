@@ -1,7 +1,7 @@
 #coding=utf-8
 from django.conf.urls.defaults import *
-from  perfiles.urls import urlpatterns as baseurlpatterns
-from perfiles.backends.simple.views import CreateUser
+from  django_users.urls import urlpatterns as baseurlpatterns
+from django_users.backends.simple.views import CreateUser
 
 urlpatterns = patterns('',
         url(r'^register/$',

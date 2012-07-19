@@ -11,6 +11,22 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+Installation
+============
+
+pip install django-users
+
+Add 'django-users' to INSTALLED_APPS
+
+Add (r'^users/', include('django_users.urls'))
+
+url(r'^users/', include('django_users.backends.confirmationemail.urls')),
+
+to urls.py
+
+Usage
+=====
+
 
 
 Indices and tables

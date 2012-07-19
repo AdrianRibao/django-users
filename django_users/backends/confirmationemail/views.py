@@ -2,7 +2,7 @@
 """
 This backend creates a deactivated user, and sends an email with the confirmation code.
 """
-from perfiles.views import CreateUserBase
+from django_users.views import CreateUserBase
 from django.template import Context, loader
 #from django.core.signing import TimestampSigner, BadSignature, SignatureExpired
 from django.contrib.auth import authenticate, login

@@ -1,6 +1,6 @@
 #coding=utf-8
 from django.contrib.gis import admin
-#from perfiles.models import Activacion
+#from django_users.models import Activacion
 
 #class ActivacionAdmin(admin.ModelAdmin):
     #pass

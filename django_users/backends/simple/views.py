@@ -3,7 +3,7 @@
 This backend just create the user
 """
 
-from perfiles.views import CreateUserBase
+from django_users.views import CreateUserBase
 from django.contrib.auth.models import User
 
 class CreateUser(CreateUserBase):

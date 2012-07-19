@@ -2,7 +2,7 @@
 from django.views.generic.edit import CreateView
 from django.views.generic.base import View
 from django.contrib.auth.models import User
-from perfiles.forms import CreateUserForm
+from django_users.forms import CreateUserForm
 from django.utils.importlib import import_module
 from django.core.exceptions import ImproperlyConfigured
 from django.conf import settings
@@ -42,7 +42,7 @@ class Register(View):
         is raised.
         """
 
-        module = getattr(settings, 'PERFILES_BACKEND', 'perfiles.backends.simple')
+        module = getattr(settings, 'PERFILES_BACKEND', 'django_users.backends.simple')
         module_views = '%s.views' % (module, )
 
         try:
