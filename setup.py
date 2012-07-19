@@ -24,6 +24,6 @@ setup(
     description='Django user registration with backends and tools',
     author='Adrián Ribao',
     url='http://gitlab.adrima.es/django-users/master/tree',
-    packages=['django_users',],
+    packages = find_packages(exclude=['tests', 'tests.*']),
     license='BSD',
 )
