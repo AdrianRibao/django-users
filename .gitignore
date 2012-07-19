@@ -7,3 +7,4 @@ env/
 .sass-cache
 .coverage
 .noseids
+/docs/build
