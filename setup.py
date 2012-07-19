@@ -25,5 +25,7 @@ setup(
     author='Adrián Ribao',
     url='http://gitlab.adrima.es/django-users/master/tree',
     packages = find_packages(exclude=['tests', 'tests.*']),
+    #package_data = {'django_users': ['templates/*', 'locale/',]},
+    include_package_data = True,
     license='BSD',
 )
