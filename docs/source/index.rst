@@ -14,20 +14,30 @@ Contents:
 Installation
 ============
 
-pip install django-users
+.. code::
 
-Add 'django-users' to INSTALLED_APPS
+    pip install django_users
 
-Add (r'^users/', include('django_users.urls'))
+Add ``'django-users'`` to ``INSTALLED_APPS``
 
-url(r'^users/', include('django_users.backends.confirmationemail.urls')),
+Add the URLs to urls.py:
 
-to urls.py
+.. code::
 
-Usage
-=====
+    # Django users
+    url(r'^users/', include('django_users.backends.confirmationemail.urls')),
 
+Available views
+===============
 
+================= ====================
+View              Name of the view
+================= ====================
+Login             auth_login
+Logout            auth_logout
+Password change   auth_password_change
+Password reset    auth_password_reset
+================= ====================
 
 Indices and tables
 ==================
