@@ -33,6 +33,7 @@ urlpatterns = patterns('',
                            name='auth_password_reset_complete'),
                        url(r'^password/reset/done/$',
                            password_reset_done,
+                           {'template_name': 'users/password-reset-done.html'},
                            name='auth_password_reset_done'),
 )
 
