@@ -18,7 +18,7 @@ Installation
 
     pip install django_users
 
-Add ``'django-users'`` to ``INSTALLED_APPS``
+Add ``'django_users'`` to ``INSTALLED_APPS``
 
 Add the URLs to urls.py:
 

@@ -75,7 +75,7 @@ class CreateUser(CreateUserBase):
 
 class Activate(TemplateView):
     signer = signing.TimestampSigner(salt='registerkey')
-    template_name = 'registration/confirmationemail/activate.html'
+    template_name = 'users/confirmationemail/activate.html'
 
     def dispatch(self, request, *args, **kwargs):
         key = args[0]

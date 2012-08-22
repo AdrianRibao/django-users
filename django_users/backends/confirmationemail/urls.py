@@ -12,7 +12,7 @@ urlpatterns = patterns('',
             ),
         url(r'^activation-sent/$',
             direct_to_template,
-            {'template':'registration/confirmationemail/activation-sent.html',},
+            {'template':'users/confirmationemail/activation-sent.html',},
             name='activation-sent'
             ),
         url(r'^activate/(.+)/$',
