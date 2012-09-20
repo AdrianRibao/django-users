@@ -9,7 +9,7 @@ from django.conf import settings
 from django.http import HttpResponseRedirect
 
 class CreateUserBase(CreateView):
-    template_name = 'registration/register.html'
+    template_name = 'users/register.html'
     model = User
     form_class = CreateUserForm
     success_url = '/'
