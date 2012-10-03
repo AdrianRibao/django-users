@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 from django.conf.urls.defaults import *
-from django.contrib.auth.views import login, logout, password_change, password_change_done,\
+from django.contrib.auth.views import logout, password_change, password_change_done,\
         password_reset, password_reset_done, password_reset_confirm, password_reset_complete
-from longerusername.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm
+from django_users.settings import LOGIN_VIEW
 
 urlpatterns = patterns('',
                        url(r'^login/$',
-                           login,
+                           LOGIN_VIEW,
                            {
                                'template_name': 'users/login.html',
                                'authentication_form': AuthenticationForm,
