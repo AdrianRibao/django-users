@@ -3,7 +3,7 @@
 
 {% block title %}{% trans "Login" %}{% endblock %}
 
-{% block content %}
+{% block registration_content %}
     <div id="loginForm">
         <form method="post" action="{% url auth_login %}">
         {% csrf_token %}
