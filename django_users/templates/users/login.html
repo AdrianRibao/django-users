@@ -18,4 +18,9 @@
         </form>
     </div>
 
+    {% block password_reset %}
+    <p><a href="{% url auth_password_reset %}">{% trans "I forgot my password" %}</a></p>
+    
+    {% endblock %}
+
 {% endblock %}
