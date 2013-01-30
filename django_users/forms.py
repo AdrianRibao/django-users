@@ -26,4 +26,4 @@ class CreateUserForm(forms.ModelForm):
         if user:
             raise forms.ValidationError(_(u"The username has already been taken"))
 
-        return self.cleaned_data
+        return username
