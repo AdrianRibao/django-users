@@ -56,9 +56,18 @@ class CreateUser(CreateUserBase):
         url = reverse('activation-sent')
         return HttpResponseRedirect(url)
 
+    def get_username(self, data):
+        return data['username']
+
+    def get_email(self, data):
+        return data['email']
+
+    def get_password(self, data):
+        return data['password']
+
     def save_user(self, form):
         data = form.cleaned_data
-        user = User.objects.create_user(data['username'], data['email'], data['password'])
+        user = User.objects.create_user(self.get_username(data), self.get_email(data), self.get_password(data))
         user.is_active = False
         user.first_name = data.get('first_name', '')
         user.last_name = data.get('last_name', '')
